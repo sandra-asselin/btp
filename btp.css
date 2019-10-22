@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Orbitron', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+	font-size: 10px;
+	font-family: 'Orbitron', sans-serif;
+	width: 100%;
+	height: 100%;
+}
+
+/* pade de contact*/
+
+a{
+	text-decoration: none;
+    color: white;
+
+}
+
+header{
+	width: 100%;
+	height: 15vh;
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url("btp.jpg") center no-repeat;
+	background-size: cover;
+	position: relative;
+    overflow: hidden;
+}
+
+footer{
+    width: 100%;
+	height: 25vh;
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url("btp.jpg") center no-repeat;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+}
+.container{
+	max-width: 120rem;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.menu-toggle{
+	position: fixed;
+	top: 2.5rem;
+	right: 2.5rem;
+	color: black;
+	font-size: 3rem;
+	cursor: pointer;
+	z-index: 1000;
+	display: none;
+}
+
+nav{
+	padding-top: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+}
+
+.perede{
+	font-size: 3rem;
+	font-weight: 300;
+	transform: translateX(-100rem);
+	animation: slideIn .5s forwards;
+}
+
+.perede span{
+	color: #3134a1;
+}
+
+nav ul{
+	display: flex;
+}
+
+nav ul li{
+	list-style: none;
+	transform: translateX(100rem);
+	animation: slideIn .5s forwards;
+}
+
+nav ul li:nth-child(1){
+	animation-delay: 0s;
+}
+
+nav ul li:nth-child(2){
+	animation-delay: .5s;
+}
+
+nav ul li:nth-child(3){
+	animation-delay: 1s;
+}
+
+nav ul li:nth-child(4){
+	animation-delay: 1.5s;
+}
+
+nav ul li a{
+	padding: 1rem 0;
+	margin: 0 3rem;
+	position: relative;
+	letter-spacing: 2px;
+}
+
+nav ul li a:last-child{
+	margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #3134a1;
+	left: 0;
+	transform: scaleX(0);
+	transition: all .5s;
+}
+
+nav ul li a::before{
+	top: 0;
+	transform-origin: left;
+}
+
+nav ul li a::after{
+	bottom: 0;
+	transform-origin: right;
+}
+
+.overlay{
+	background-color: rgba(0,0,0,.95);
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	transition: opacity 650ms;
+	transform: scale(0);
+	opacity: 0;
+  display: none;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+	transform: scaleX(1);
+}
+
+@keyframes slideIn {
+	from{
+
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+
+@media screen and (max-width: 700px){
+
+	.menu-toggle{
+		display: block;
+	}
+
+	nav{
+		padding-top: 0;
+		display: none;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		height: 100vh;
+		text-align: center;
+	}
+
+	nav ul{
+		flex-direction: column;
+	}
+
+	nav ul li{
+		margin-top: 5rem;
+	}
+
+	nav ul li a{
+		margin: 0;
+		font-size: 2.5rem;
+	}
+
+	.perede{
+		font-size: 5rem;
+	}
+  
+  .overlay.menu-open,
+  nav.menu-open{
+	  display: flex;
+	  transform: scale(1);
+	  opacity: 1;
+  }
+  
+}
+
+
+p{
+	color: white;
+	font-size: 13px;
+}
+
+.contact-section{
+	padding: 40px 0;
+	padding-bottom: 0;
+}
+
+.contact-section h1{
+    text-align: center;
+    color: black;
+}
+
+.border{
+    width: 100px;
+    height: 10px;
+    background: #3134a1;
+    margin: 40px auto;
+}
+
+.contact-form{
+    max-width: 600PX;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.contact-form-text{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+	background: #3134a1;
+    padding: 20px 40px;
+    outline: none;
+    color: white;
+    transition: 0.5s;
+}
+
+.contact-form-text:focus{
+    box-shadow: 0 0 10px 4px #3134a1;
+}
+
+textarea.contact-form-text{
+    resize: none;
+    height: 120px;
+}
+
+.contact-form-btn{
+    float: right;
+    border: 0;
+    background: white;
+    color:#3134a1;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.contact-form-btn:hover{
+	background: #3134a1;
+	color:white;
+} 
+/*page d'équipe */
+
+body{
+	margin: 0;
+	padding: 0;
+
+}
+
+.container2{
+
+	width: 1280px;
+	margin: 70px auto 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.container2 .box{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	margin: 10px;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+.container2 .box .imgBox{
+	position: relative;
+	overflow: hidden;
+}
+
+.container2 .box .imgBox img{
+	max-width: 100%;
+	transition: transform 2s;
+}
+
+.container2 .box:hover .imgBox img{
+	transform: scale(1.2);
+}
+
+.container2 .box .details{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	bottom: 10px;
+	right: 10px;
+	background: rgba(0,0,0,.4);
+	transform: scaleY(0);
+	transition: transform .5s;
+}
+
+.container2 .box:hover .details{
+	transform: scaleY(1);
+}
+
+.container2 .box .details .content{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	padding: 15px;
+	color: #3134a1;
+}
+
+.container2 .box .details .content h2{
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+}
+
+/*page de realisation */
+
+main{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	
+}
+
+.container3{
+	width: 1000px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.box3{
+	position: relative;
+	width: 300px;
+	height: 400px;
+	background:#3134a1;
+	box-shadow: 0 30px 30px rgba(0,0,0,0.5);
+}
+
+.box3 .ImgBx{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.box3 .ImgBx img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: 0.5s;
+}
+
+.box3:hover .ImgBx img{
+	opacity: 0;
+}
+
+.box3 .content3{
+	position: absolute;
+	bottom: 20px;
+	left: 10%;
+	width: 80%;
+	height: 60px;
+	background-image: url(btp.jpg);
+	transition: 0.5s;
+	overflow: hidden;
+	padding: 15px;
+	box-sizing: border-box;
+
+}
+
+.box3:hover .content3{
+	height: 100%;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+
+.box3 .content3 h3{
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	color: #3134a1;
+}
+
+.box3 .content3 p#details{
+	margin: 10px 0 0;
+	padding: 0;
+	opacity: 0;
+	line-height: 1.2rem;
+	transition: 0.5s;
+	text-align: justify;
+	color: white;
+
+}
+
+
+.box3:hover .content3 p#details{
+	opacity: 1;
+	transition-delay: 0.5s;
+}
+
+/* Page d'accueil */
+
+.containerA{
+	width: 1280px;
+	margin: 70px auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.containerA .boxA{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	background: #ff0;
+	margin: 10px;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+.containerA .boxA .ImgBox{
+	position: relative;
+	overflow: hidden;
+}
+
+.containerA .boxA .ImgBox img {
+	max-width: 100%;
+	transition: transform 2s;
+}
+
+.containerA .boxA:hover .ImgBox img {
+	transform: scale(1.2);
+}
+
+.containerA .boxA .detailsA{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	bottom: 10px;
+	right: 10px;
+	background: rgba(0, 0, 0, .8);
+	transform: scaleY(0);
+	transition: transform .5s;
+}
+
+.containerA .boxA:hover .detailsA{
+	transform: scaleY(1);
+}
+
+.containerA .boxA .detailsA .contentA{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	padding: 15px;
+	color: #fff;
+}
+
+.containerA .boxA .detailsA .contentA h2{
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	color: #3134a1;
+}
+
+/* Page "Qui-Sommes-Nous ?" */
+p4{
+	font-size: 20px;
+	color: blue;
+}
+
+#PrésentationQ{
+	position: relative;
+	height: 200px;
+	background: url(portugal.jpg);
+	background-size: cover;
+}
+
+#Prix {
+	margin: 0;
+	position: relative;
+	display: flex;
+	width: 1516px;
+	height: 200px;
+	flex-direction: column;
+	background: url(mur.png) no-repeat;
+	background-size: cover;
+}
+
+#TOP1 {
+	position: absolute;
+	left: 50%;
+	width: 740px;
+	height: 50px;
+
+}
+
+#Prix h2, #Vidéo h2, #Récompenses h2, #PrésentationQ h2{
+	font-size: 30px;
+}
+
+#QSM{
+	display: block;
+}
